@@ -20,7 +20,7 @@ public class SettingsDialog extends DialogFragment {
                 .setItems(R.array.colors, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //derp depr something
+                        //derp derp something
                     }
                 });
         return builder.create();
