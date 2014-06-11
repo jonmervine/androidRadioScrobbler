@@ -20,13 +20,12 @@ public class SearchDialog extends DialogFragment {
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        //derp depr something
+                        //derp derp something
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        //derp depr something
+                    public void onClick(DialogInterface dialog, int which) {//derp derp something
                     }
                 })
                 .setTitle(R.string.action_search);
