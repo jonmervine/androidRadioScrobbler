@@ -3,11 +3,15 @@ package com.darkmage530.androidRadioScrobbler;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
 public class MyActivity extends Activity {
     public static final String EXTRA_MESSAGE = "com.darkmage530.androidRadioScrobbler.MESSAGE";
+
     /**
      * Called when the activity is first created.
      */
@@ -15,6 +19,37 @@ public class MyActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.action_search:
+                openSearch();
+                return true;
+            case R.id.action_settings:
+                actionSettings();
+                return true;
+            default:
+                return super.onOptionsItemSelected(menuItem);
+        }
+    }
+
+    private void actionSettings() {
+        SettingsDialog settings = new SettingsDialog();
+        settings.show(getFragmentManager(), "settigns");
+    }
+
+    private void openSearch() {
+        SearchDialog search = new SearchDialog();
+        search.show(getFragmentManager(), "search");
     }
 
     public void sendMessage(View view) {
