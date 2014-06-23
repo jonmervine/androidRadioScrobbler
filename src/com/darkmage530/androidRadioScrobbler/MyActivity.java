@@ -22,6 +22,12 @@ public class MyActivity extends Activity {
     }
 
     @Override
+    public void onStop() {
+        super.onStop();
+    }
+
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.main_activity_actions, menu);
@@ -44,7 +50,7 @@ public class MyActivity extends Activity {
 
     private void actionSettings() {
         SettingsDialog settings = new SettingsDialog();
-        settings.show(getFragmentManager(), "settigns");
+        settings.show(getFragmentManager(), "settings");
     }
 
     private void openSearch() {
@@ -57,6 +63,11 @@ public class MyActivity extends Activity {
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String sentMessage = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, sentMessage);
+        startActivity(intent);
+    }
+
+    public void startStreaming(View view) {
+        Intent intent = new Intent(this, MusicPlayer.class);
         startActivity(intent);
     }
 }

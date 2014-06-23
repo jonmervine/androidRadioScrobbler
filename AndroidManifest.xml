@@ -20,5 +20,13 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.darkmage530.androidRadioScrobbler.MyActivity" />
         </activity>
+        <activity
+            android:name="com.darkmage530.androidRadioScrobbler.MusicPlayer"
+            android:label="@string/title_activity_music_player"
+            android:parentActivityName="com.darkmage530.androidRadioScrobber.MyActivity">
+                <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.darkmage530.androidRadioScrobbler.MyActivity"/>
+        </activity>
     </application>
 </manifest>

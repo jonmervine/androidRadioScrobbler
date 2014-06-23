@@ -7,7 +7,13 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
     <string name="action_search">Search</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="search_dialog">This message appears on the search dialog</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="start_radio">Play AnimeNFO.com/Radio</string>
+    <string name="song_info">Song not Started</string>
+    <string name="title_activity_music_player">Radio Streamer</string>
+    <string name="button_start_music_player">Radio</string>
 </resources>
